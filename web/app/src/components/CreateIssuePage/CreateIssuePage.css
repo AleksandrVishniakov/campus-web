@@ -1,0 +1,15 @@
+.CreateIssuePage {
+    width: 60vw;
+    max-width: 800px;
+    padding: 20px clamp(3px, 3vw, 100px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media(max-width: 700px) {
+    .CreateIssuePage {
+        width: 100vw;
+    }
+}
+

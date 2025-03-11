@@ -1,0 +1,21 @@
+.AuthForm {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+}
+
+.AuthFrom_submit-button {
+    margin-top: 20px !important;
+}
+
+.AuthForm_error {
+    text-align: center;
+    color: tomato;
+    opacity: 0;
+    transition-duration: .2s;
+}
+
+.AuthForm_error.visible {
+    opacity: 1;
+}
