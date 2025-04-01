@@ -7,6 +7,18 @@
     gap: 20px;
 }
 
+.CreateIssuePage_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.CreateIssuePage_title {
+    width: fit-content
+}
+
 @media(max-width: 700px) {
     .CreateIssuePage {
         width: 100vw;

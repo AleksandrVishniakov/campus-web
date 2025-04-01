@@ -1,0 +1,111 @@
+.ProfilePage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1080px;
+    padding: 10px clamp(5px, 3vw, 50px);
+}
+
+.information {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 200px;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        p {
+            width: fit-content;
+        }
+    }
+}
+
+.user-info_id {
+    color: gray;
+    text-decoration: solid;
+    font-size: 20px;
+}
+
+.user-info_id::first-letter {
+    font-size: 14px;
+}
+
+.user-info_role {
+    background-color: #1976D2;
+    padding: 5px 12px;
+    border-radius: 7px;
+    color: white;
+}
+
+.user_meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 300px;
+    max-width: 500px;
+    flex: 1 1;
+
+    h3 {
+        font-weight: 500;
+    }
+}
+
+.meta_form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+
+    & > div {
+        display: flex;
+        flex-direction: row;
+
+        gap: 30px;
+
+        & > * {
+            flex: 1 1 50%;
+        }
+    }
+}
+
+.issues_block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    align-items: flex-start;
+
+    h3 {
+        font-weight: 500;
+    }
+}
+
+.issues_list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.fab {
+    position: fixed !important;
+    top: 85vh;
+    right: 2vw;
+}
