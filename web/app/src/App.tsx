@@ -119,14 +119,19 @@ const App: React.FC<{
           )
         case Screens.Register:
           return (
-            <RegisterPage onNavigateToLogin={() => { setScreen(Screens.Login) }} />
+            <RegisterPage
+              authAPI={authAPI}
+              onError={handleError}
+              onRegister={() => { setScreen(Screens.Profile) }}
+              onNavigateToLogin={() => { setScreen(Screens.Login) }}
+            />
           )
         case Screens.CreateIssue:
           return (
-            <CreateIssuePage 
+            <CreateIssuePage
               issueAPI={issuesAPI}
               onError={handleError}
-              onClose={()=>{setScreen(Screens.Profile)}}
+              onClose={() => { setScreen(Screens.Profile) }}
             />
           )
         case Screens.Profile:
@@ -138,15 +143,15 @@ const App: React.FC<{
               onError={handleError}
               onExit={handleExit}
               onOpenIssue={handleOpenIssue}
-              onNewIssue={()=>{setScreen(Screens.CreateIssue)}}
-              onAdminPanel={()=>{setScreen(Screens.Admin)}}
+              onNewIssue={() => { setScreen(Screens.CreateIssue) }}
+              onAdminPanel={() => { setScreen(Screens.Admin) }}
             />
           )
         case Screens.Admin:
-          return <AdminPanelPage 
+          return <AdminPanelPage
             issuesAPI={issuesAPI}
             onError={handleError}
-            onClose={()=>{setScreen(Screens.Profile)}}
+            onClose={() => { setScreen(Screens.Profile) }}
             onOpenIssue={handleOpenIssue}
           />
       }
@@ -155,12 +160,12 @@ const App: React.FC<{
     return (
       <div className="App">
         {navigation()}
-        <IssueWindow 
+        <IssueWindow
           issuesAPI={issuesAPI}
           onError={handleError}
-          open={issueOpen} 
-          data={issueData} 
-          onClose={() => { setIssueOpen(false) }} 
+          open={issueOpen}
+          data={issueData}
+          onClose={() => { setIssueOpen(false) }}
         />
 
         <Snackbar open={errorOpen} autoHideDuration={3000} onClose={handleSnackbarClose} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}>

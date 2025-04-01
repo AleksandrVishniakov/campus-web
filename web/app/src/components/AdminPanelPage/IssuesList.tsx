@@ -70,6 +70,8 @@ const IssuesList: React.FC<Props> = (props) => {
                                 description={issue.description}
                                 isClosed={issue.isClosed}
                                 createdAt={issue.createdAt}
+                                class={issue.class}
+                                room={issue.room}
                             />
                         ))}
                     </div>
